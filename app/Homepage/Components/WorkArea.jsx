@@ -26,7 +26,7 @@ export default function WorkArea(){
 
 
                {/* services section */}
-               <section className="flex  gap-10 mt-20 mb-12 overflow-x-scroll scrollbar-hide ">
+               <section className="flex  gap-10 mt-20 mb-12 overflow-x-scroll scrollbar-hide px-5 md:px-0 ">
                      {cards.map((item,index)=>(
                         <div key={index} className="flex flex-wrap justify-start gap-4 relative group">
                           <div className="px-3 xl:p-0 w-85 md:w-90 lg:h-full lg:w-80">
