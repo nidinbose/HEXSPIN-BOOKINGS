@@ -2,7 +2,9 @@
 
 
 const cards=[{img:"https://images.unsplash.com/photo-1618477388954-7852f32655ec?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8d2ViJTIwZGV2ZWxvcGVyfGVufDB8fDB8fHww",vid:'https://videos.pexels.com/video-files/7989667/7989667-sd_360_640_25fps.mp4',role:'Website Development'},
-    {img:"https://images.unsplash.com/photo-1633250391894-397930e3f5f2?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bW9iaWxlJTIwYXBwJTIwZGV2ZWxvcG1lbnR8ZW58MHx8MHx8fDA%3D",vid:'https://videos.pexels.com/video-files/5925286/5925286-sd_360_640_24fps.mp4',role:"Application Development"}]
+    {img:"https://images.unsplash.com/photo-1633250391894-397930e3f5f2?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bW9iaWxlJTIwYXBwJTIwZGV2ZWxvcG1lbnR8ZW58MHx8MHx8fDA%3D",vid:'https://videos.pexels.com/video-files/5925286/5925286-sd_360_640_24fps.mp4',role:"Application Development"}
+  ,  {img:"https://images.unsplash.com/photo-1633250391894-397930e3f5f2?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bW9iaWxlJTIwYXBwJTIwZGV2ZWxvcG1lbnR8ZW58MHx8MHx8fDA%3D",vid:'https://videos.pexels.com/video-files/5925286/5925286-sd_360_640_24fps.mp4',role:"Application Development"}
+  ]
 
 export default function WorkArea(){
     return(
@@ -24,11 +26,11 @@ export default function WorkArea(){
 
 
                {/* services section */}
-               <section className="flex overflow-x-auto gap-10 mt-20 mb-12 overflow-x-scroll scrollbar-hide">
+               <section className="flex  gap-10 mt-20 mb-12 overflow-x-scroll scrollbar-hide ">
                      {cards.map((item,index)=>(
                         <div key={index} className="flex flex-wrap justify-start gap-4 relative group">
-                          <div className="">
-                          <img src={item.img} alt="" className="h-100 group-hover:h-0 w-80 group-hover:w-0 bg-cover opacity-100 hover:opacity-0 rounded-3xl " />
+                          <div className="px-3 xl:p-0 w-85 md:w-90 lg:h-full lg:w-80">
+                          <img src={item.img} alt="" className=" h-100 md:h-100 group-hover:h-0 w-full md:w-80 group-hover:w-0 bg-cover opacity-100 hover:opacity-0 rounded-3xl " />
                           <video
                     src={item.vid}
                     className=" relative h-0 w-0 group-hover:h-100 group-hover:w-80 object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out "
@@ -60,7 +62,7 @@ export default function WorkArea(){
 
                           {/* hover effect */}
 
-                          <div className="opacity-0 hover:opacity-100 absolute z-50 inset-0">
+                          <div className="opacity-0 hover:opacity-100 absolute z-50 inset-0 max-w-xs">
                           <h1 className="family absolute top-4 left-6 
                  transform translate-y-[-100%] opacity-0 
                  group-hover:translate-y-0 group-hover:opacity-100 
@@ -77,7 +79,7 @@ export default function WorkArea(){
 
 
 
-<p className=" absolute top-20 left-6 text-xs font-light
+<p className=" absolute top-20 left-6 text-xs font-light 
    transform translate-x-[100%] opacity-0
    group-hover:translate-x-0 group-hover:opacity-100
    transition-all duration-500 ease-in-out">
