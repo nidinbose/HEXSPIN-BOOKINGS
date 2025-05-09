@@ -21,6 +21,12 @@
 html {
   scroll-behavior: smooth;
 }
+
+.translate-gpu {
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
@@ -47,3 +53,4 @@ body, * {
   -ms-overflow-style: none; 
   scrollbar-width: none; 
 }
+
