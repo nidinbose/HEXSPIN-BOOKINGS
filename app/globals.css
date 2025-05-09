@@ -18,9 +18,32 @@
     --foreground: #ededed;
   }
 }
-
+html {
+  scroll-behavior: smooth;
+}
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+body, * {
+  cursor: none;
+}
+
+@font-face {
+  font-family: 'Nohemi';
+  src: url('/Fonts/Nohemi-Medium-BF6438cc581a509 - Copy.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.family {
+  font-family: 'Nohemi', sans-serif;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none; 
+  scrollbar-width: none; 
 }
