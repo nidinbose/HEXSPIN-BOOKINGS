@@ -1,11 +1,13 @@
 'use client'
 
+import { TextGenerateEffect } from "@/app/Engine/TextGrow"
+
 
 const cards=[{img:"https://images.unsplash.com/photo-1618477388954-7852f32655ec?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8d2ViJTIwZGV2ZWxvcGVyfGVufDB8fDB8fHww",vid:'https://videos.pexels.com/video-files/7989667/7989667-sd_360_640_25fps.mp4',role:'Website Development'},
     {img:"https://images.unsplash.com/photo-1633250391894-397930e3f5f2?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bW9iaWxlJTIwYXBwJTIwZGV2ZWxvcG1lbnR8ZW58MHx8MHx8fDA%3D",vid:'https://videos.pexels.com/video-files/5925286/5925286-sd_360_640_24fps.mp4',role:"Application Development"}
   ,  {img:"https://images.unsplash.com/photo-1633250391894-397930e3f5f2?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bW9iaWxlJTIwYXBwJTIwZGV2ZWxvcG1lbnR8ZW58MHx8MHx8fDA%3D",vid:'https://videos.pexels.com/video-files/5925286/5925286-sd_360_640_24fps.mp4',role:"Application Development"}
   ]
-
+const words = `WHAT WE CAN DO`
 export default function WorkArea(){
     return(
         <div className="min-h-full  bg-transparent">
@@ -15,6 +17,7 @@ export default function WorkArea(){
                <h1 className="family text-xl md:text-5xl text-gray-400">WHAT WE CAN DO </h1>
                 <h2 className="family text-xl md:text-5xl mt-2">YOUR IDEOLOGY OUR CREATION</h2>
                 <h3 className="family text-xl md:text-5xl mt-2">RESULT ORENTED DYNAMIC DELIVERED </h3>
+                <TextGenerateEffect words={words} />
                </div>
 
                <div className="text-sm md:text-md family font-light px-4">
@@ -26,7 +29,7 @@ export default function WorkArea(){
 
 
                {/* services section */}
-               <section className="flex  gap-10 mt-20 mb-12 overflow-x-scroll scrollbar-hide px-5 md:px-0 ">
+               <section className="flex  gap-10 mt-20 mb-12 overflow-x-scroll overflow-y-hidden scrollbar-hide px-5 md:px-0 ">
                      {cards.map((item,index)=>(
                         <div key={index} className="flex flex-wrap justify-start gap-4 relative group">
                           <div className="px-3 xl:p-0 w-85 md:w-90 lg:h-full lg:w-80">
@@ -40,7 +43,7 @@ export default function WorkArea(){
                     playsInline
                   />
 
-                  <div className="bg-transparent inset-0 absolute group-hover:bg-black/70 "></div>
+                  <div className="bg-transparent inset-0 h-auto absolute group-hover:bg-black/70 "></div>
 
  <div className="group relative h-0 group-hover:h-20 overflow-hidden">
   <div className="absolute top-0 left-0 w-full h-0  group-hover:h-15 bg-white/10
@@ -56,7 +59,7 @@ export default function WorkArea(){
 </div>
 
 
-                          <h1 className="text-center family mt-5">{item.role}</h1>
+                          <h1 className="text-center family mt-5 group-hover:mt-0 h-full group-hover:h-0 opacity-100 group-hover:opacity-0">{item.role}</h1>
                           </div>
 
 
@@ -70,7 +73,7 @@ export default function WorkArea(){
                   WEBDEVELOPMENT
                   </h1>
 
-                  <p className="family absolute top-10 left-6 text-xs font-light
+                  <p className="family absolute top-58 left-6 text-sm font-light
    transform translate-x-[-100%] opacity-0
    group-hover:translate-x-0 group-hover:opacity-100
    transition-all duration-500 ease-in-out">
@@ -79,7 +82,7 @@ export default function WorkArea(){
 
 
 
-<p className=" absolute top-20 left-6 text-xs font-light 
+<p className=" absolute bottom-30 left-6 text-xs font-light 
    transform translate-x-[100%] opacity-0
    group-hover:translate-x-0 group-hover:opacity-100
    transition-all duration-500 ease-in-out">
