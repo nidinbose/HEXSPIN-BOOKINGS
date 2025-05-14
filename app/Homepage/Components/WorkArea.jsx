@@ -1,11 +1,13 @@
 'use client'
 
-import { TextGenerateEffect } from "@/app/Engine/TextGrow"
+// import { TextGenerateEffect } from "@/app/Engine/TextGrow"
+import { RiArrowRightUpLine } from "react-icons/ri";
+import { GoArrowRight } from "react-icons/go";
 
 
 const cards=[{img:"https://images.unsplash.com/photo-1618477388954-7852f32655ec?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8d2ViJTIwZGV2ZWxvcGVyfGVufDB8fDB8fHww",vid:'https://videos.pexels.com/video-files/7989667/7989667-sd_360_640_25fps.mp4',role:'Website Development'},
-    {img:"https://images.unsplash.com/photo-1633250391894-397930e3f5f2?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bW9iaWxlJTIwYXBwJTIwZGV2ZWxvcG1lbnR8ZW58MHx8MHx8fDA%3D",vid:'https://videos.pexels.com/video-files/5925286/5925286-sd_360_640_24fps.mp4',role:"Application Development"}
-  ,  {img:"https://images.unsplash.com/photo-1633250391894-397930e3f5f2?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bW9iaWxlJTIwYXBwJTIwZGV2ZWxvcG1lbnR8ZW58MHx8MHx8fDA%3D",vid:'https://videos.pexels.com/video-files/5925286/5925286-sd_360_640_24fps.mp4',role:"Application Development"}
+    {img:"https://img.freepik.com/premium-photo/phone-mobile-application-development-concept-mobile-internet-3d-illustration_76964-5164.jpg",vid:'https://videos.pexels.com/video-files/5925286/5925286-sd_360_640_24fps.mp4',role:"Application Development"}
+  ,  {img:"https://images.unsplash.com/photo-1626785774573-4b799315345d?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z3JhcGhpYyUyMGRlc2lnbnxlbnwwfHwwfHx8MA%3D%3D",vid:'https://videos.pexels.com/video-files/4167404/4167404-sd_360_480_24fps.mp4',role:"Graphic Designing"}
   ]
 const words = `WHAT WE CAN DO`
 export default function WorkArea(){
@@ -54,7 +56,11 @@ export default function WorkArea(){
       flex items-center justify-center">
     <div className="flex items-center justify-between gap-x-7">
       <h1 className="family">Get free counsltation</h1>
-      <button className="rounded-full h-12 w-12 border border-white"></button>
+      <button className="relative overflow-hidden rounded-full h-12 w-12 border border-white group">
+    
+        <span className="text-center flex items-center justify-center"><RiArrowRightUpLine/></span>
+
+    </button>
     </div>
   </div>
 </div>
@@ -71,26 +77,11 @@ export default function WorkArea(){
                  transform translate-y-[-100%] opacity-0 
                  group-hover:translate-y-0 group-hover:opacity-100 
                  transition-all duration-500 ease-in-out">
-                  WEBDEVELOPMENT
+                {item.role}
                   </h1>
 
                   <h2 className="absolute top-10 left-12 opacity-20">
-                  <svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-  
-  <rect x="40" y="120" width="120" height="20" rx="5" fill="#ffffff"/>
-  <rect x="50" y="60" width="100" height="60" rx="5" fill="#ffffff" stroke="#ffffff" stroke-width="2"/>
-
-
-  <rect x="60" y="70" width="40" height="6" rx="2" fill="#000000">
-    <animate attributeName="width" values="40;70;40" dur="2s" repeatCount="indefinite" />
-  </rect>
-  <rect x="60" y="82" width="60" height="6" rx="2" fill="#000000">
-    <animate attributeName="width" values="60;90;60" dur="2.5s" repeatCount="indefinite" />
-  </rect>
-  <rect x="60" y="94" width="50" height="6" rx="2" fill="#000000">
-    <animate attributeName="width" values="50;80;50" dur="1.8s" repeatCount="indefinite" />
-  </rect>
-</svg>
+                 <img src="" alt="" />
 
                   </h2>
 
@@ -106,7 +97,7 @@ export default function WorkArea(){
 <p className=" absolute bottom-24 left-6 text-xs font-light 
    transform translate-x-[100%] opacity-0
    group-hover:translate-x-0 group-hover:opacity-100
-   transition-all duration-500 ease-in-out">
+   transition-all duration-500 ease-in-out family">
   Professional web developmentProfessional web development
   Professional web development Professional web development
   Professional web development Professional web development
